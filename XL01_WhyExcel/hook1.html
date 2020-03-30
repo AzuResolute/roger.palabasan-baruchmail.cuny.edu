@@ -95,6 +95,11 @@
         transform: rotateY(180deg);
       }
 
+      .announcement {
+        width: 500px;
+        height: 275px
+      }
+
     </style>
 
     <script
@@ -180,20 +185,76 @@
               However, Excel is so much more complex than that.
               For example, did you know that the program can do all of the following:
             </p>
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between flex-wrap flex-lg-nowrap">
               <ul>
                 <li>Organize data in an easy-to-navigate way</li>
                 <li>For educators, keep track of student performance</li>
-                <li>Do basic <strong>and</strong> complex mathematical functions so you don’t have to. See the table to the right, grades are calculated for you</li>
+                <li>Do basic <strong>and</strong> complex mathematical functions so you don’t have to</li>
                 <li>Turn piles of data into helpful graphics and charts</li>
                 <li>Analyze data and make forecasting predictions</li>
                 <li>Share data online using Google Sheets</li>
                 <li>Create, build, and edit pixelated images (yes, creatives use it, too!)</li>
               </ul>
-              <img
-                class="p-1 ml-2 mb-3 border border-success img-fluid d-none d-sm-none d-md-none d-lg-block"
-                src="https://github.com/AzuResolute/ExcelRepo/raw/master/ExcelGradingPreview.PNG" > 
+                <div id="announcements" class="carousel slide p-1 ml-2 mb-3 h-100 border border-success" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li
+                      data-target="#announcements"
+                      data-slide-to="0"
+                      class="active"
+                    ></li>
+                    <li data-target="#announcements" data-slide-to="1"></li>
+                    <li data-target="#announcements" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item announcement active">
+                      <img
+                        src="https://github.com/AzuResolute/ExcelRepo/raw/master/ExcelGradingPreview.PNG"
+                        class="announcement"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item announcement">
+                      <img
+                        src="https://github.com/AzuResolute/ExcelRepo/raw/master/ExcelStudentPreview.PNG"
+                        class="announcement"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item announcement">
+                      <img
+                        src="https://github.com/AzuResolute/ExcelRepo/raw/master/RockClimbingChart.png"
+                        class="announcement"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev"
+                    href="#announcements"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#announcements"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
             </div>
+            
             <p>
               Long story short?
               There’s a lot more to the program than you probably even realized, 
@@ -212,7 +273,7 @@
               data-target="#accordion-professionals"
               aria-expanded="false"
               aria-controls="accordion-professionals">
-              Application of Spreadsheet Technology by Professionals
+              Application of Excel by Professionals
             </h3>
           </div>
           <div
