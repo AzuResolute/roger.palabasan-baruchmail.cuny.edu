@@ -9,10 +9,8 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display+SC&display=swap" rel="stylesheet">
+
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -20,16 +18,47 @@
       crossorigin="anonymous"
     />
     <style>
+      * {
+        font-family: 'Montserrat', sans-serif;
+      }
+
       h1,
       h5,
       h6 {
         font-family: 'Playfair Display SC', serif;
       }
+
+      #accordion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .accordion-body, .accordion-heading {
+        width: 100%;
+        max-width: 1110px;
+      }
+
+      .collapse-btn {
+        background-color: #68b0ab
+      }
+
       .card-image {
         max-height: 357px;
         background-position: top;
         border: 1px solid black;
       }
+
+      h1, h5 {
+        background-color: #4a7c59;
+        color: whitesmoke;
+        margin-bottom: 0;
+      }
+
+      .card-text {
+        line-height: 1.8;
+      }
+
       .flip-card {
         background-color: transparent;
         width: 300px;
@@ -67,7 +96,7 @@
         background-color: azure;
         transform: rotateY(180deg);
       }
-      
+
     </style>
 
     <script
@@ -89,125 +118,109 @@
     <title>Why Learn Excel?</title>
   </head>
   <body class="home-body">
+    <header>
+      <h1 class="px-5 py-2">Why Learn Excel?</h1>
+      <h5 class="px-5 py-2">By Leila Gharani</h5>
+    </header>
     <main>
       <div id="accordion">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h4 class="mb-0">
-              <button
-                class="btn btn-link"
-                data-toggle="collapse"
-                data-target="#accordion-announcements"
-                aria-expanded="true"
-                aria-controls="accordion-announcements"
-              >
-                Application of Spreadsheet Technology
-              </button>
-            </h4>
+        <div class="card accordion-heading">
+          <div class="card-header">
+            <h3
+              id="headingZero"
+              class="px-4 font-weight-bold"
+              data-toggle="collapse"
+              data-target="#accordion-intro"
+              aria-expanded="true"
+              aria-controls="accordion-intro">
+              The Required Skill of the Information Age
+            </h3>
           </div>
           <div
-            id="accordion-announcements"
-            class="collapse show"
-            aria-labelledby="headingOne"
-            data-parent="#accordion"
+            id="accordion-intro"
+            class="collapse show p-5 accordion-body"
+            aria-labelledby="headingZero"
           >
-            <div id="announcements" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#announcements"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li data-target="#announcements" data-slide-to="1"></li>
-                <li data-target="#announcements" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item announcement active">
-                  <img
-                    src="../public/announcement/pinoy_generic_restaurant.jpg"
-                    class="announcement"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>New Location in Boracay, Philippines</h3>
-                    <p>
-                      Check out our new location at an exotic paradise in the
-                      Far East
-                    </p>
-                  </div>
-                </div>
-                <div class="carousel-item announcement">
-                  <img
-                    src="../public/announcement/tsg-special-brew.jpg"
-                    class="announcement"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>The Drink of the Month: TSG Special Brew.</h3>
-                    <p>
-                      Quench your thirst with our special draught. NYTimes
-                      called it "The Elixer of Life".
-                    </p>
-                  </div>
-                </div>
-                <div class="carousel-item announcement">
-                  <img
-                    src="../public/announcement/seafood-special.jpg"
-                    class="announcement"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>Seasonal Seafood Menu</h3>
-                    <p>Including our seasonal favorite, crab roll!</p>
-                  </div>
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#announcements"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#announcements"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+            <p>
+              Teachers use Microsoft Excel when they need to need compare a student to their peers.
+              So do entrepreneurs, when they’re considering which offering(s) to keep and which to retire.
+              As do scientists, who want to figure out the homogeneity of a dataset.
+            </p>
+            <p>
+              The three professions are among the 80 percent of job openings that require spreadsheet and word-processing software skills.
+              Yet so many people never even give Excel a chance because it has an intimidating stigma around it.
+            </p>
+            <p>
+              The bad news is “technological illiteracy, much less technophobia, is no longer a sustainable option for the modern worker.
+              Effectively, entire segments of the U.S. economy are off-limits to people who don’t have basic digital skills.”
+              This trend is continuing to grow. During the Covid-19 pandemic, majority of spreadsheet workers remained employed.
+            </p>
+            <p>
+              The good news? Well, there’s lots of good news actually. Keep reading, and you’ll learn why you need to add Excel to your resume.
+            </p>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h4 class="mb-0">
-              <button
-                class="btn btn-link collapsed"
-                data-toggle="collapse"
-                data-target="#accordion-menu"
-                aria-expanded="false"
-                aria-controls="accordion-menu"
-              >
-                Professionals at Work
-              </button>
-            </h4>
+        <div class="card accordion-heading">
+          <div class="card-header">
+            <h3
+              id="headingOne"
+              class="px-4 font-weight-bold"
+              data-toggle="collapse"
+              data-target="#accordion-why"
+              aria-expanded="true"
+              aria-controls="accordion-why">
+              Main Uses of Excel
+            </h3>
           </div>
           <div
-            id="accordion-menu"
-            class="collapse"
+            id="accordion-why"
+            class="collapse show p-5 accordion-body"
+            aria-labelledby="headingOne"
+          >
+            <p>
+              When you were in school, maybe you used Excel to plug in a few number tables or add two cells together.
+              However, Excel is so much more complex than that.
+              For example, did you know that the program can do all of the following:
+            </p>
+            <div class="d-flex justify-content-between">
+              <ul>
+                <li>Organize data in an easy-to-navigate way</li>
+                <li>For educators, keep track of student performance</li>
+                <li>Do basic <strong>and</strong> complex mathematical functions so you don’t have to. See the table to the right, grades are calculated for you</li>
+                <li>Turn piles of data into helpful graphics and charts</li>
+                <li>Analyze data and make forecasting predictions</li>
+                <li>Share data online using Google Sheets</li>
+                <li>Create, build, and edit pixelated images (yes, creatives use it, too!)</li>
+              </ul>
+              <img
+                class="p-1 ml-2 mb-3 border border-success"
+                src="https://github.com/AzuResolute/ExcelRepo/raw/master/ExcelGradingPreview.PNG" > 
+            </div>
+            <p>
+              Long story short?
+              There’s a lot more to the program than you probably even realized, 
+              and there’s a use for it no matter what you do. 
+              It’s more about problem-solving in an organized manner than it is about rows of data, 
+              and this shift in perspective will allow you to think more critically about how Excel can help you.
+            </p>
+          </div>
+        </div>
+        <div class="card accordion-heading">
+          <div class="card-header">
+            <h3
+              id="headingTwo"
+              class="px-4 font-weight-bold"
+              data-toggle="collapse"
+              data-target="#accordion-professionals"
+              aria-expanded="false"
+              aria-controls="accordion-professionals">
+              Application of Spreadsheet Technology by Professionals
+            </h3>
+          </div>
+          <div
+            id="accordion-professionals"
+            class="collapse show p-5 accordion-body"
             aria-labelledby="headingTwo"
-            data-parent="#accordion"
           >
             <section class="container text-center pt-3">
               <div class="row menu d-flex justify-content-around">
@@ -260,7 +273,7 @@
                       </h6>
                     </div>
                     <div class="flip-card-back card-body">
-                      <h5 class="card-title">Japanese Classical Artist</h5>
+                      <h5 class="card-title">Japanese Classic Artist</h5>
                       <div class="card-text text-justify">
                         While most digital artists opt to use Photoshop or other
                         similar digital imaging software, 77-year-old Japanese
@@ -271,7 +284,7 @@
                         of natural landscapes rich with cultural motifs.
                       </div>
                       <a
-                        href="https://mymodernmet.com/tatsuo-horiuchi-excel-spreadsheet-paintings/"
+                        href="http://www2.odn.ne.jp/~cbl97790/shinsakutenjishitu2.htm"
                         target="_blank"
                       >
                         <div class="btn btn btn-outline-success fixed-bottom">
@@ -303,7 +316,7 @@
                         He also possesses a high level overciew of the class through aggregation functions such as Mean and Average.
                       </div>
                       <a
-                        href="https://mymodernmet.com/tatsuo-horiuchi-excel-spreadsheet-paintings/"
+                        href="https://github.com/AzuResolute/ExcelRepo/raw/master/GradeBook.xlsx"
                       >
                         <div class="btn btn btn-outline-success fixed-bottom disabled">
                           Grade Book
@@ -315,7 +328,7 @@
                 <article class="col-lg-4 col-md-6 flip-card">
                   <div class="flip-card-inner card">
                     <div class="flip-card-front card-body">
-                      <h5 class="card-title">Data Scientist</h5>
+                      <h5 class="card-title">Scientist - Climber</h5>
                       <img
                         class="card-image"
                         src="https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
@@ -327,7 +340,7 @@
                       </h6>
                     </div>
                     <div class="flip-card-back card-body">
-                      <h5 class="card-title">Data Scientist</h5>
+                      <h5 class="card-title">Scientist - Climber</h5>
                       <div class="card-text text-justify">
                         Jane Doe has spent 10 years using Excel to work with multitudes of data and transform them into dashboards that create value.
                         She is also an avid rock climber in NYC's Cliffs gym. By combining her passion for data and becoming a better climber,
@@ -346,30 +359,30 @@
                 <article class="col-lg-4 col-md-6 flip-card">
                   <div class="flip-card-inner card">
                     <div class="flip-card-front card-body">
-                      <h5 class="card-title">Youtuber</h5>
+                      <h5 class="card-title">Accountant - Developer</h5>
                       <img
                         class="card-image"
-                        src="https://www.xelplus.com/wp-content/uploads/2020/02/Leila_Image_notebook.jpg"
+                        src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
                         class="card-img-top"
                         alt="..."
                       />
                       <h6 class="card-subtitle mb-2 text-muted mt-2">
-                        Leila Gharani
+                        Cary Walkin
                       </h6>
                     </div>
                     <div class="flip-card-back card-body">
-                      <h5 class="card-title">Youtuber</h5>
+                      <h5 class="card-title">Accountant - Developer</h5>
                       <div class="card-text text-justify">
-                        First time I used Excel was at my first job as an Economist. Yep – no Excel at University at the time.
-                        I was really impressed and overwhelmed by all the options. There was no way, I was going to learn all of that.
-                        I concentrated on the basics and searched for what I needed. 
+                        Accountant Cary Walkin from Canada built an entire role playing game (RPG) leveraging the power of macros in Excel. 
+                        You can download the game and even modify it for free here.
+                        The game has over 2,000 enemies, a variety of weapons, and even spells.
                       </div>
                       <a
-                        href="https://www.xelplus.com/about-leila-gharani/"
+                        href="http://carywalkin.ca/download-arena-xlsm/"
                         target="_blank"
                       >
                         <div class="btn btn btn-outline-success fixed-bottom">
-                          See Her Works
+                          Arena Xlsm Game
                         </div>
                       </a>
                     </div>
@@ -395,7 +408,7 @@
                         <p class="font-italic">"The Health Care industry requires that information needs to be recorded and shared efficiently.
                         Spreadsheet technology, such as Excel, Google Docs, and the health care software that utilize them became a foundation for saving lives.
                         In my opinion, spreadsheet technology is the future of healthcare"</p>
-                        <P>- Jan Czarina Javier</p>
+                        <P class="text-right">- Jan Czarina Javier</p>
                       </div>
                       <a
                         href="https://lagcc-cuny.digication.com/jan_javier_ep_scholars_spring2016/AboutMe"
@@ -412,25 +425,22 @@
             </section>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h4 class="mb-0">
-              <button
-                class="btn btn-link collapsed"
-                data-toggle="collapse"
-                data-target="#accordion-drinks"
-                aria-expanded="false"
-                aria-controls="accordion-drinks"
-              >
-                For the Students
-              </button>
-            </h4>
+        <div class="card accordion-heading">
+          <div class="card-header">
+            <h3
+              id="headingThree"
+              class="px-4 font-weight-bold"
+              data-toggle="collapse"
+              data-target="#accordion-students"
+              aria-expanded="false"
+              aria-controls="accordion-students">
+              The Future of Students
+            </h3>
           </div>
           <div
-            id="accordion-drinks"
-            class="collapse"
+            id="accordion-students"
+            class="collapse show p-5 accordion-body"
             aria-labelledby="headingThree"
-            data-parent="#accordion"
           >
             <p>
               Excel is very beneficial for students. Students can learn by using
