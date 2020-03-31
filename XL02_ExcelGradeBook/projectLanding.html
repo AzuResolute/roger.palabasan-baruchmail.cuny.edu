@@ -1,0 +1,193 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display+SC&display=swap" rel="stylesheet">
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.8;
+      }
+
+      h1,
+      h5,
+      h6 {
+        font-family: 'Playfair Display SC', serif;
+      }
+
+      #accordion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .accordion-body, .accordion-heading {
+        width: 100%;
+        max-width: 1110px;
+        text-align: justify;
+      }
+
+      .collapse-btn {
+        background-color: #68b0ab
+      }
+
+      .card-image {
+        max-height: 357px;
+        background-position: top;
+        border: 1px solid black;
+      }
+
+      h1, h5 {
+        background-color: #4a7c59;
+        color: #F5F5DC;
+        margin-bottom: 0;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 470px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+      }
+
+      .flip-card-front {
+        background-color: #F0FFFF;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: #F0FFFF;
+        transform: rotateY(180deg);
+      }
+
+      .announcement {
+        width: 500px;
+        height: 275px
+      }
+
+    </style>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+
+    </script>
+
+    <title>Create an Excel Grade Book</title>
+  </head>
+  <body class="home-body">
+    <header>
+      <h1 class="px-5 py-2">Creating an Excel Grade Book</h1>
+      <h5 class="px-5 py-2">By Leila Gharani</h5>
+    </header>
+    <main>
+      <div id="scrape"></div>
+      <div id="accordion">
+        <div class="card accordion-heading">
+          <div class="card-header">
+            <h3
+              id="headingZero"
+              class="px-4 font-weight-bold"
+              data-toggle="collapse"
+              data-target="#accordion-intro"
+              aria-expanded="true"
+              aria-controls="accordion-intro">
+              Preamble
+            </h3>
+          </div>
+          <div
+            id="accordion-intro"
+            class="collapse show p-5 accordion-body"
+            aria-labelledby="headingZero"
+          >
+            <p>
+              Seen by many as the industry standard for data analysis, including graphing and producing tables, Microsoft's Excel is a wonderful application that can be used to achieve student learning outcomes. As educators start to understand the usefulness of such applications, we predict that a great number of staff will not only ask for training and support on these types of applications, but demand it.
+            </p>
+            <p>
+              The transparent, yet under lying fact is that mathematicians are begging for us to realize that simple data collection is not a viable life skill without the ability to analyze the data. Applications like Excel's ability to help you quickly organize and create graphical representations of data for easier analysis is becoming a dominate force not only in the educational arena, but in the corporate world.  
+            </p>
+            <p>
+              It's no wonder why many educators from all levels are fast learning that applications like Excel not only need to be introduced in a students' K-12 program, but it need to be introduced early and revisited often to reinforce the skills associated with such applications.
+            </p>
+            <p>
+              Yet, many educators seem to be intimated by the level of understanding and competence required to effectively use applications like Excel in their teaching. In fact, many of our staff developers are often told by the educators who they work with, "If I don't understand it, do you think that my students will?" While this statement is no doubt true, we encourage teachers to think of using technology, in this case applications like Excel, as they would any other tool in teaching. As with anything newly learned, it takes time to develop a new skill.
+            </p>
+            <p>
+              We will create a grade book to gain familiarity with the tool
+            </p>
+          </div>
+        </div>
+        <div class="card accordion-heading">
+          <div class="card-header">
+            <h3
+              id="headingOne"
+              class="px-4 font-weight-bold"
+              data-toggle="collapse"
+              data-target="#accordion-why"
+              aria-expanded="true"
+              aria-controls="accordion-why">
+              Project Rundown
+            </h3>
+          </div>
+          <div
+            id="accordion-why"
+            class="collapse show p-5 accordion-body"
+            aria-labelledby="headingOne"
+          >
+            <embed src="http://eds-courses.ucsd.edu/eds203/fa07/a/gradebook.pdf" width="800px" height="1000px" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

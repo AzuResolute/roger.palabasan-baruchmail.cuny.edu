@@ -3,6 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      .card-image {
+        max-height: 357px;
+        background-position: top;
+        border: 1px solid black;
+      }
+
+      .elementToFadeInAndOut {
+            -webkit-animation: fadeinout 4s linear forwards;
+            animation: fadeinout 4s linear forwards;
+        }
+
+        @-webkit-keyframes fadeinout {
+        0%,100% { opacity: 0; }
+        50% { opacity: 1; }
+        }
+
+        @keyframes fadeinout {
+        0%,100% { opacity: 0; }
+        50% { opacity: 1; }
+        }
+    
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 470px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #F0FFFF;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: #F0FFFF;
+        transform: rotateY(180deg);
+      }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -31,6 +94,28 @@
         ">
             By Technology for Teachers and Students
         </h5>
+
+        <article class="col-lg-4 col-md-6 flip-card">
+            <div class="flip-card-inner card">
+              <div class="flip-card-front card-body">
+                <img
+                  class="card-image"
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="flip-card-back card-body align-items-between">
+                <img
+                  class="card-image"
+                  src="https://previews.123rf.com/images/rumandawi/rumandawi1712/rumandawi171200012/91235771-inspirational-quote-believe-you-can-and-you-re-halfway-there-.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </article>
+
       </main>
 </body>
 </html>
